@@ -1,2 +1,4 @@
-str = "Holberton School"
-print(f"{str * 3}\n{str[:9]}\n")
+str1 = "Holberton"
+str2 = "School"
+str3 = ' '
+print(f"Welcome to {str1 + str3 + str2}!")
