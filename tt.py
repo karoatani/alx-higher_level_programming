@@ -1,2 +1,2 @@
-number = 3.142345
-print(f"Float: {number:.2f}")
+str = "Holberton School"
+print(f"{str * 3}\n{str[:9]}\n")
