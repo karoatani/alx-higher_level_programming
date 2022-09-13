@@ -1,6 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/
+""" Define a class """
+
+
 class Square:
-    """This class does nothing"""
+    """A square class model"""
 
     def __init__(self, size):
         self.__size = size
