@@ -9,7 +9,7 @@ class Square:
     def __init__(self, size=0):
         """Initialized a square
         Args:
-            size (:obj:`int`, optional): size of the square
+            size (int): size of the square.
         """
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
