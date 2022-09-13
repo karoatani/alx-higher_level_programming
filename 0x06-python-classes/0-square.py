@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Define a class """
+
+
 class Square:
-    """This class does nothing"""
+    """A square class model"""
     pass
