@@ -65,10 +65,11 @@ class Square:
         """Print hashs in square form"""
         if self.size == 0:
             print()
+            return
         else:
-            for _ in range(0, self.size):
-                if not self.__position[1] > 0:
-                    print('{}'.format(self.__position[0] * ' '), end='')
-                for _ in range(0, self.size):
-                    print('{}'.format('#'), end='')
+            for _ in range(self.__size):
+                for _ in range(self.__position[0]):
+                    print(" ", end="")
+                for _ in range(self.__size):
+                    print("#", end="")
                 print()
