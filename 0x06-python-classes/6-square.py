@@ -33,6 +33,10 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """set a position
+        Args:
+            value (tuple): a tuple.
+        """
         if isinstance(value, tuple):
             for i in value:
                 if isinstance(i, int):
