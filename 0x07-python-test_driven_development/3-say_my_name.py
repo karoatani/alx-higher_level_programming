@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
 def say_my_name(first_name, last_name=""):
+    """ Prints Full name
+    Args:
+    first_name (str): firstname of a person
+    last_name (str): last name of a person
+
+    Raises:
+        TypeError: if arguments are not string typeerror is raised  
+    """
     if not isinstance(first_name, str):
         raise TypeError('first_name must be a string')
 
