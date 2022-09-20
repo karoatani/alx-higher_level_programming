@@ -58,6 +58,7 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return 0
         return 2 * (self.width + self.height)
+
     """Added custom str method"""
 
     def __str__(self):
@@ -66,7 +67,7 @@ class Rectangle:
         li = []
         for i in range(self.height):
             for j in range(self.width):
-                li.append(Rectangle.print_symbol)
+                li.append(f'{self.print_symbol}')
             li.append('\n')
         return ''.join(li).strip()
 
