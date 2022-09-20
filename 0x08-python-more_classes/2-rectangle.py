@@ -44,10 +44,12 @@ class Rectangle:
 
         self.__height = value
 
+    """Calculates the area"""
+
     def area(self):
-        """Calculates the area"""
         return self.width * self.height
 
+    """Calculates the perimeter"""
+
     def perimeter(self):
-        """Calculates the perimeter"""
         return 2 * (self.width + self.height)
