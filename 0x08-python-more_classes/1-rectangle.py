@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Defines an empty rectangle class
+Defines an rectangle class
 """
 
 
 class Rectangle:
     """
-    Creates an empty rectangle class.
+    Creates an rectangle class.
     """
 
     def __init__(self, width=0, height=0):
