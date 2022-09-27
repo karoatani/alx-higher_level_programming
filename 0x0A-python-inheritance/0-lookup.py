@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """List all available attributes and methds of a object"""
-    return [i for i in obj.__dict__]
+    return dir(obj)
