@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines a base class"""
 import json
+import csv
 
 
 class Base:
@@ -79,3 +80,39 @@ class Base:
             instances.append(inst)
 
         return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+
+        class_name = cls.__name__ + '.csv'
+        with open(class_name, 'w') as fd:
+            writer_obj = csv.writer(fd, delimiter=' ')
+
+            for obj in list_objs:
+                item = obj.to_dictionary()
+                if cls.__name__ == 'Rectangle':
+
+                    writer_obj.writerow(
+                        [str(item['id'])] + [str(item['width'])] + [str(item['height'])] + [str(item['x'])] + [str(item['y'])])
+
+                elif cls.__name__ == 'Square':
+
+                    writer_obj.writerow(
+                        [str(item['id'])] + [str(item['size'])] + [str(item['x'])] + [str(item['y'])])
+
+    @classmethod
+    def load_from_file_csv(cls):
+
+        class_name = cls.__name__ + '.csv'
+        list_of_obj_value = []
+
+        with open(class_name, newline='') as fd:
+            reader_ob = csv.reader(fd, delimiter=' ')
+
+            for row in reader_ob:
+                string = ''
+                string += ', '.join(row)
+                if string != '':
+                    list_of_obj_value.append([string])
+
+        return list_of_obj_value

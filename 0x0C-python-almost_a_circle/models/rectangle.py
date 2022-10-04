@@ -123,3 +123,10 @@ class Rectangle(Base):
                 'id': getattr(self, "id"),
                 'height': getattr(self, "height"),
                 'width': getattr(self, "width")}
+
+
+r = Rectangle(1, 2, 3, 4, 8)
+r1 = Rectangle(300, 401, 50, 30, 20)
+
+Rectangle.save_to_file_csv([r, r1])
+x = Rectangle.load_from_file_csv()
