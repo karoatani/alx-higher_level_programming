@@ -102,13 +102,10 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-
         class_name = cls.__name__ + '.csv'
         list_of_obj_value = []
-
         with open(class_name, newline='') as fd:
             reader_ob = csv.reader(fd, delimiter=' ')
-
             for row in reader_ob:
                 string = ''
                 string += ', '.join(row)
